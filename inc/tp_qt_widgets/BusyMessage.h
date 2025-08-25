@@ -45,6 +45,7 @@ struct BusyMessageConfiguration
 class TP_QT_WIDGETS_SHARED_EXPORT BusyMessage: public QFrame
 {
   Q_OBJECT
+  TP_DQ;
 public:
   //################################################################################################
   //! Construct the widget but dont start the task
@@ -70,11 +71,6 @@ public:
   This will start the task in a thread and block untill that task is completed.
   */
   void exec();
-
-private:
-  struct Private;
-  Private* d;
-  friend struct Private;
 };
 
 }

@@ -16,6 +16,7 @@ namespace tp_qt_widgets
 class TP_QT_WIDGETS_SHARED_EXPORT BusyAnimationGenerator
 {
   TP_NONCOPYABLE(BusyAnimationGenerator);
+  TP_DQ;
 public:
   //################################################################################################
   BusyAnimationGenerator();
@@ -42,11 +43,6 @@ public:
 
   //################################################################################################
   void setRepeat(int repeat);
-
-private:
-  struct Private;
-  Private* d;
-  friend struct Private;
 };
 
 }

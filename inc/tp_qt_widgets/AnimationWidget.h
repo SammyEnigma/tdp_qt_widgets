@@ -17,6 +17,7 @@ class Animation;
 class TP_QT_WIDGETS_SHARED_EXPORT AnimationWidget: public QWidget
 {
   Q_OBJECT
+  TP_DQ;
 public:
   //################################################################################################
   //! Construct an empty animation
@@ -28,7 +29,6 @@ public:
   virtual ~AnimationWidget();
 
   //################################################################################################
-  //! Set the animation
   void setAnimation(const Animation& animation);
 
   //################################################################################################
@@ -38,14 +38,11 @@ public:
   virtual QSize	sizeHint() const;
 
 protected:
+  //################################################################################################
   virtual void timerEvent(QTimerEvent* event);
 
+  //################################################################################################
   virtual void paintEvent(QPaintEvent* event);
-
-private:
-  struct Private;
-  Private* d;
-  friend struct Private;
 };
 
 }

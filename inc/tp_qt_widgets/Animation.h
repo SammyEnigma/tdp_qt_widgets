@@ -51,6 +51,7 @@ struct AnimationKeyFrame
 class TP_QT_WIDGETS_SHARED_EXPORT Animation
 {
   TP_NONCOPYABLE(Animation);
+  TP_DQ;
 public:
   //################################################################################################
   //! Construct an empty animation
@@ -104,11 +105,6 @@ public:
   \param scaleY - The amount to sacle the y axis by.
   */
   void setScale(float scaleX, float scaleY);
-
-private:
-  struct Private;
-  Private* d;
-  friend struct Private;
 };
 
 }

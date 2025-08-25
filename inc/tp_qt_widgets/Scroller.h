@@ -18,6 +18,7 @@ This class provides touch and drag scrolling for lists and scroll areas on mobil
 class TP_QT_WIDGETS_SHARED_EXPORT Scroller: QObject
 {
   Q_OBJECT
+  TP_DQ;
 public:
   //################################################################################################
   //! Construct a new scroller and parent it to the scrollarea
@@ -33,11 +34,6 @@ public:
 
   //################################################################################################
   virtual void timerEvent(QTimerEvent* event);
-
-private:
-  struct Private;
-  Private* d;
-  friend struct Private;
 };
 
 }
