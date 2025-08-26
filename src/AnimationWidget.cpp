@@ -14,7 +14,7 @@ struct AnimationWidget::Private
   TP_REF_COUNT_OBJECTS("tp_qt_widgets::AnimationWidget::Private");
   TP_NONCOPYABLE(Private);
 
-  AnimationWidget* q;
+  Q* q;
 
   Animation animation;
   int currentFrame;
@@ -22,7 +22,7 @@ struct AnimationWidget::Private
   int timerID;
 
   //################################################################################################
-  Private(AnimationWidget* q_):
+  Private(Q* q_):
     q(q_),
     currentFrame(0),
     fps(12),

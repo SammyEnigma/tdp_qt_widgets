@@ -26,7 +26,7 @@ struct BusyMessage::Private: public QThread
   TP_NONCOPYABLE(Private);
 
   friend class BusyMessage;
-  BusyMessage* q;
+  Q* q;
   BusyMessageConfiguration configuration;
 
   tp_qt_utils::Progress progress;
@@ -40,7 +40,7 @@ struct BusyMessage::Private: public QThread
 
 
   //################################################################################################
-  Private(BusyMessage* q_, BusyMessageConfiguration configuration_):
+  Private(Q* q_, BusyMessageConfiguration configuration_):
     q(q_),
     configuration(std::move(configuration_)),
     eventLoop(new QEventLoop()),

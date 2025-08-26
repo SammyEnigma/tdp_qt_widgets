@@ -40,7 +40,7 @@ struct Scroller::Private
   TP_REF_COUNT_OBJECTS("tp_qt_widgets::Scroller::Private");
   TP_NONCOPYABLE(Private);
 
-  Scroller* q;
+  Q* q;
   QAbstractScrollArea* scrollArea;
 
   QDateTime lastRecording;
@@ -59,7 +59,7 @@ struct Scroller::Private
   bool movementStarted{false};
 
   //################################################################################################
-  Private(Scroller* q_, QAbstractScrollArea* scrollArea_):
+  Private(Q* q_, QAbstractScrollArea* scrollArea_):
     q(q_),
     scrollArea(scrollArea_)
   {

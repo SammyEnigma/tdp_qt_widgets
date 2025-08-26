@@ -9,6 +9,8 @@
 
 namespace tp_qt_widgets
 {
+
+//##################################################################################################
 class ScrollArea::Private: public QWidget
 {
   TP_REF_COUNT_OBJECTS("tp_qt_widgets::ScrollArea::Private");
